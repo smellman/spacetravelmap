@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140412151109) do
+ActiveRecord::Schema.define(version: 20140412232328) do
 
   create_table "points", force: true do |t|
     t.string   "image_identification_string"
@@ -23,6 +23,7 @@ ActiveRecord::Schema.define(version: 20140412151109) do
     t.string   "imgurl"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.text     "astronomical"
   end
 
 end

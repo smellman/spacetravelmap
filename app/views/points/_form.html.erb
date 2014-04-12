@@ -12,6 +12,10 @@
   <% end %>
 
   <div class="field">
+    <%= f.label "天体の種別(月: lunar, 火星: mars)" %><br>
+    <%= f.text_field :astronomical %>
+  </div>
+  <div class="field">
     <%= f.label :image_identification_string %><br>
     <%= f.text_field :image_identification_string %>
   </div>

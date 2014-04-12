@@ -4,7 +4,11 @@ class PointsController < ApplicationController
   # GET /points
   # GET /points.json
   def index
-    @points = Point.all
+    if params[:astronomical]
+      @points = Point.where(astronomical: params[:astronomical]).all
+    else
+      @points = Point.all
+    end
   end
 
   # GET /points/1
@@ -69,6 +73,6 @@ class PointsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def point_params
-      params.require(:point).permit(:image_identification_string, :latitude, :longitude, :spot, :legend, :url, :imgurl)
+      params.require(:point).permit(:astronomical, :image_identification_string, :latitude, :longitude, :spot, :legend, :url, :imgurl)
     end
 end

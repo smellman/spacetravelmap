@@ -3,6 +3,7 @@
 <table>
   <thead>
     <tr>
+      <th>天体の種別(月: lunar, 火星: mars)</th>
       <th>Image identification string</th>
       <th>Latitude</th>
       <th>Longitude</th>
@@ -17,6 +18,7 @@
   <tbody>
     <% @points.each do |point| %>
       <tr>
+        <td><%= point.astronomical %></td>
         <td><%= point.image_identification_string %></td>
         <td><%= point.latitude %></td>
         <td><%= point.longitude %></td>
