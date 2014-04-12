@@ -1,0 +1,37 @@
+<h1>Listing points</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Image identification string</th>
+      <th>Latitude</th>
+      <th>Longitude</th>
+      <th>Spot</th>
+      <th>Legend</th>
+      <th>Url</th>
+      <th>Imgurl</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @points.each do |point| %>
+      <tr>
+        <td><%= point.image_identification_string %></td>
+        <td><%= point.latitude %></td>
+        <td><%= point.longitude %></td>
+        <td><%= point.spot %></td>
+        <td><%= point.legend %></td>
+        <td><%= point.url %></td>
+        <td><%= point.imgurl %></td>
+        <td><%= link_to 'Show', point %></td>
+        <td><%= link_to 'Edit', edit_point_path(point) %></td>
+        <td><%= link_to 'Destroy', point, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Point', new_point_path %>

@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Image identification string:</strong>
+  <%= @point.image_identification_string %>
+</p>
+
+<p>
+  <strong>Latitude:</strong>
+  <%= @point.latitude %>
+</p>
+
+<p>
+  <strong>Longitude:</strong>
+  <%= @point.longitude %>
+</p>
+
+<p>
+  <strong>Spot:</strong>
+  <%= @point.spot %>
+</p>
+
+<p>
+  <strong>Legend:</strong>
+  <%= @point.legend %>
+</p>
+
+<p>
+  <strong>Url:</strong>
+  <%= @point.url %>
+</p>
+
+<p>
+  <strong>Imgurl:</strong>
+  <%= @point.imgurl %>
+</p>
+
+<%= link_to 'Edit', edit_point_path(@point) %> |
+<%= link_to 'Back', points_path %>
